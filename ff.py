@@ -1,9 +1,16 @@
 print("Welcome\n")
-
-
-QB=['qb1','qb2','qb3',]
-RB=['rb1','rb2','rb3',]
-
+PlayerPool={
+    'QB':{
+        'qb1':'Pat Mahomes',
+        'qb2':'Russell Wilson',
+        'qb3':'Lamar Jackson',
+    },
+    'RB':{
+        'rb1':'Christian Mccafferey',
+        'rb2':'Chris Carson',
+        'rb3':'Leonard Fournette',
+    }
+}
 def team1(players):
     return players
 
@@ -11,7 +18,10 @@ results={}
 counter=1
 while counter in range(1,3):
     firstpick=team1(input("Enter player name: "))
-    firstcount=("QB",counter)
+    if firstpick in PlayerPool:
+        firstpick = PlayerPool.QB.get('qb1')
+        firstcount = PlayerPool.QB.get('Pat Mahomes')
+    else:firstcount=("QB",counter)
     secondpick=team1(input("Enter player name: "))
     counter +=1
     secondcount=("QB",counter)
@@ -20,7 +30,7 @@ while counter in range(1,3):
 
     
 
-print("Your team is")
+print("Your team is:\n")
 
 print(firstpick,firstcount,'\n')
-print(secondpick,secondcount)
+print(secondpick,secondcount,'\n')
