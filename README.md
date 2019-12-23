@@ -1,2 +1,1 @@
-"# dingbat" 
-"# dingbat" 
+"# dingbat"
